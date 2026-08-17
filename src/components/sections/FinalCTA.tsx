@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const WA_LINK =
-  "https://wa.me/5534999999999?text=Ol%C3%A1%2C+vim+pelo+site+e+quero+um+or%C3%A7amento+para+minha+obra";
+  "https://wa.me/553432224654?text=Ol%C3%A1%2C+vim+pelo+site+e+quero+um+or%C3%A7amento+para+minha+obra";
 
 export function FinalCTA() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -60,14 +60,7 @@ export function FinalCTA() {
             <span className="relative z-10">Falar com nossa equipe</span>
           </Link>
           
-          <Link
-            href="mailto:contato@eurodrywall.com.br"
-            className="group inline-flex items-center justify-center gap-2 text-white/80 hover:text-white font-medium px-8 py-5 transition-all duration-300"
-          >
-            <span className="border-b border-transparent group-hover:border-white/50 pb-0.5 transition-colors">
-              Enviar projeto por e-mail
-            </span>
-          </Link>
+
         </div>
       </div>
     </section>

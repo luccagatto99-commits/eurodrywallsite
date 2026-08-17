@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const WA_LINK =
-  "https://wa.me/5534999999999?text=Ol%C3%A1%2C+vim+pelo+site+e+quero+um+or%C3%A7amento+para+minha+obra";
+  "https://wa.me/553432224654?text=Ol%C3%A1%2C+vim+pelo+site+e+quero+um+or%C3%A7amento+para+minha+obra";
 
 export function Hero() {
   return (
@@ -53,7 +53,7 @@ export function Hero() {
       <div className="hidden lg:block lg:w-1/2 relative">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/fotoinicial.jpeg"
+          src="/images/fotoinicial2.jpeg"
           alt="Obra executada pela EuroDrywall"
           className="absolute inset-0 h-full w-full object-cover"
           loading="eager"

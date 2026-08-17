@@ -3,7 +3,7 @@ import { TrustBar } from "@/components/sections/TrustBar";
 import { Stats } from "@/components/sections/Stats";
 import { Services } from "@/components/sections/Services";
 import { Portfolio } from "@/components/sections/Portfolio";
-import { Suppliers } from "@/components/sections/Suppliers";
+// import { Suppliers } from "@/components/sections/Suppliers"; /* TEMPORARIAMENTE DESATIVADO — reativar quando parceiros confirmados */
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <Stats />
       <Services />
       <Portfolio />
-      <Suppliers />
+      {/* <Suppliers /> TEMPORARIAMENTE DESATIVADO — reativar quando parceiros confirmados */}
       <FinalCTA />
 
       {/* Sticky WhatsApp — visível só em mobile */}

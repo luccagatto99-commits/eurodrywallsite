@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const WA_LINK =
-  "https://wa.me/5534999999999?text=Ol%C3%A1%2C+vim+pelo+site+e+quero+um+or%C3%A7amento+para+minha+obra";
+  "https://wa.me/553432224654?text=Ol%C3%A1%2C+vim+pelo+site+e+quero+um+or%C3%A7amento+para+minha+obra";
 
 export function WhatsAppButton() {
   return (

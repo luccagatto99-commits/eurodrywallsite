@@ -4,22 +4,19 @@ const services = [
   {
     title: "Paredes em Drywall",
     description:
-      "Divisórias internas, paredes externas, sistemas acústicos e resistentes ao fogo. Especificamos o perfil correto para cada carga e uso — não existe drywall genérico aqui.",
-    tags: ["Knauf", "Placo Saint-Gobain", "Acústico", "RF60 / RF90"],
+      "Divisórias internas, paredes externas, sistemas acústicos e resistentes ao fogo. Especificamos o perfil correto para cada carga e uso, sem drywall genérico.",
     image: "/images/drywall.png",
   },
   {
     title: "Forros Drywall e Modular",
     description:
-      "Forro em drywall convencional, gesso acartonado com recorte acústico, OWA Sonex e Hunter Douglas para espaços comerciais exigentes. Instalação nivelada com régua a laser.",
-    tags: ["OWA Sonex", "Hunter Douglas", "Knauf Ceiling Solutions"],
+      "Forro em drywall convencional, gesso acartonado com recorte acústico para espaços comerciais exigentes. Instalação nivelada com régua a laser.",
     image: "/images/ceiling.png",
   },
   {
     title: "Steel Frame",
     description:
-      "Estrutura leve em aço galvanizado para construção residencial e comercial. Obra limpa, sem entulho, cronograma previsível — e desempenho térmico calculável.",
-    tags: ["Ananda Aços", "Isover Saint-Gobain", "Aquapanel Knauf"],
+      "Estrutura leve em aço galvanizado para construção residencial e comercial. Obra limpa, sem entulho, cronograma previsível e desempenho térmico calculável.",
     image: "/images/steelframe.png",
   },
 ];
@@ -78,16 +75,7 @@ export function Services() {
                 <p className="text-secondary/70 text-sm leading-relaxed flex-1">
                   {service.description}
                 </p>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {service.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-2.5 py-1 rounded-sm bg-accent/15 text-accent font-medium border border-accent/20"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+
               </div>
             </div>
           ))}
