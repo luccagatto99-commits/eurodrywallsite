@@ -8,6 +8,10 @@ const suppliers = [
   { name: "Knauf Ceiling Solutions", logo: "/images/knaufceilingsolutions.png" },
   { name: "Knauf Aquapanel", logo: "/images/knaufaquapanel.png" },
   { name: "Ananda Aços", logo: "/images/anandalogo.png" },
+  { name: "Saint-Gobain", logo: "/images/saintgobain.jpg" },
+  { name: "Brasilit", logo: "/images/brasilit.jpg" },
+  { name: "Ecophon", logo: "/images/ecophon.jpg" },
+  { name: "Adfors", logo: "/images/adfors.jpg" },
   { name: "Hunter Douglas", logo: "/images/hunterdouglas.png" },
 ];
 
