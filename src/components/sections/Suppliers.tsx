@@ -4,12 +4,9 @@ import Image from "next/image";
 
 const suppliers = [
   { name: "Knauf", logo: "/images/knauflogo.png" },
-  { name: "Ananda Aços", logo: "/images/anandalogo.png" },
-  { name: "Knauf Aquapanel", logo: "/images/knaufaquapanel.png" },
   { name: "Knauf Ceiling Solutions", logo: "/images/knaufceilingsolutions.png" },
-  { name: "Placo Saint-Gobain", logo: "/images/logoplaco.webp" },
-  { name: "Isover Saint-Gobain", logo: "/images/isover.png" },
-  { name: "OWA Sonex", logo: "/images/owa.png" },
+  { name: "Knauf Aquapanel", logo: "/images/knaufaquapanel.png" },
+  { name: "Ananda Aços", logo: "/images/anandalogo.png" },
   { name: "Hunter Douglas", logo: "/images/hunterdouglas.png" },
 ];
 
@@ -37,7 +34,7 @@ export function Suppliers() {
         </div>
 
         {/* Elegant Grid Layout */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5">
           {suppliers.map((s) => (
             <div
               key={s.name}
