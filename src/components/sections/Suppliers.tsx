@@ -1,26 +1,28 @@
 "use client";
 
 import Image from "next/image";
-import { Marquee } from "@/components/ui/marquee";
 
-const suppliers = [
+const row1 = [
   { name: "Knauf", logo: "/images/knauflogo.png" },
   { name: "Knauf Ceiling Solutions", logo: "/images/knaufceilingsolutions.png" },
   { name: "Knauf Aquapanel", logo: "/images/knaufaquapanel.png" },
-  { name: "Ananda Aços", logo: "/images/anandalogo.png" },
-  { name: "Saint-Gobain", logo: "/images/saintgobain.jpg" },
-  { name: "Brasilit", logo: "/images/brasilit.jpg" },
+  { name: "Ananda", logo: "/images/anandalogo.png" },
   { name: "Ecophon", logo: "/images/ecophon.jpg" },
+];
+
+const row2 = [
+  { name: "Saint-Gobain", logo: "/images/saintgobain.jpg" },
+  { name: "Brasilit Saint-Gobain", logo: "/images/brasilit.jpg" },
   { name: "Adfors", logo: "/images/adfors.jpg" },
   { name: "Hunter Douglas", logo: "/images/hunterdouglas.png" },
 ];
 
-function PartnerCard({ s }: { s: (typeof suppliers)[number] }) {
+function PartnerCard({ s }: { s: { name: string; logo: string } }) {
   return (
     <div
-      className="group relative bg-white border border-border/80 rounded-xl p-5 sm:p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-accent/50 flex items-center justify-center w-[220px] sm:w-[260px] h-[110px] sm:h-[120px] shrink-0 overflow-hidden"
+      className="group relative bg-white border border-border/80 rounded-xl p-4 sm:p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-accent/50 flex items-center justify-center w-full min-w-[140px] max-w-[180px] sm:max-w-[200px] h-[95px] sm:h-[110px] overflow-hidden"
     >
-      <div className="relative w-full h-full min-h-[55px] opacity-75 group-hover:opacity-100 transition-all duration-300 grayscale group-hover:grayscale-0 group-hover:scale-105">
+      <div className="relative w-full h-full min-h-[45px] sm:min-h-[55px] opacity-80 group-hover:opacity-100 transition-all duration-300 grayscale group-hover:grayscale-0 group-hover:scale-105">
         <Image 
           src={s.logo} 
           alt={`Logo ${s.name}`} 
@@ -59,25 +61,21 @@ export function Suppliers() {
         </div>
       </div>
 
-      {/* Infinite Rolling Rows */}
-      <div className="relative flex flex-col gap-4 overflow-hidden">
-        {/* Top Row — Scrolling Right */}
-        <Marquee reverse pauseOnHover repeat={4} className="[--duration:28s] [--gap:1.25rem]">
-          {suppliers.map((s, idx) => (
-            <PartnerCard key={`top-${s.name}-${idx}`} s={s} />
+      {/* Static Rows */}
+      <div className="max-w-6xl mx-auto px-6 relative z-10 flex flex-col gap-4 sm:gap-5">
+        {/* Row 1 — 5 partners */}
+        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-5">
+          {row1.map((s) => (
+            <PartnerCard key={s.name} s={s} />
           ))}
-        </Marquee>
+        </div>
 
-        {/* Bottom Row — Scrolling Left */}
-        <Marquee pauseOnHover repeat={4} className="[--duration:28s] [--gap:1.25rem]">
-          {suppliers.map((s, idx) => (
-            <PartnerCard key={`bottom-${s.name}-${idx}`} s={s} />
+        {/* Row 2 — 4 partners */}
+        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-5">
+          {row2.map((s) => (
+            <PartnerCard key={s.name} s={s} />
           ))}
-        </Marquee>
-
-        {/* Side Gradient Fade Masks */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-muted to-transparent z-10" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-muted to-transparent z-10" />
+        </div>
       </div>
     </section>
   );
